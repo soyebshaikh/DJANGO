@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Sports</title>
+</head>
+<body>
+    {% extends 'theme.html' %}
+{% block content %}
+<h1>Products</h1>
+<div class="container">
+ <div class="row">
+ {% for product in products %}
+ <div class="col-md-3">
+ <div class="container">
+ <div class="card" >
+ <img class="card-img-top" src="{{product.image}}"
+alt="Card image cap">
+ <div class="card-body">
+ <h5 class="card-title">{{product.name}}</h5>
+ <p class="card-text">{{product.price}}</p>
+ <a href="#" class="btn btn-primary">Go somewhere</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ {% endfor %}
+ </div>
+</div>
+{% endblock %}
+<h1>product</h1>
+{% for product in products %}
+<li>{{product.name}}</li>
+{% endfor %}
+</body>
+</html>
